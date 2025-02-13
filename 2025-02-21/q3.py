@@ -1,6 +1,6 @@
 # 3. Simulate a process algebra-based load balancer where multiple clients send requests to a central
 # dispatcher that distributes tasks among available workers. Verify that requests are handled
-# fairly without starvation.
+# fairly without starvation
 
 import asyncio
 import random
