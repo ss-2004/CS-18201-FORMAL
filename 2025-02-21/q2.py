@@ -1,6 +1,6 @@
 # 2. Develop a Python program that models a system of three CCS processes executing actions in
 # parallel, ensuring synchronization where required. Introduce relabeling and restriction to study
-# their impact on process behavior.
+# their impact on process behavior
 
 class CCSProcess:
     def __init__(self, name, actions):
