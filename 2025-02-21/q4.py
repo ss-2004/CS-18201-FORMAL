@@ -1,6 +1,6 @@
 # 4. Implement a Python-based verification system that checks whether two given finite-state
 # processes are equivalent using strong bisimulation. The program should take two process
-# descriptions as input and determine whether they exhibit the same external behavior.
+# descriptions as input and determine whether they exhibit the same external behavior
 
 from collections import defaultdict, deque
 
