@@ -1,6 +1,6 @@
 # 1. Implement a system where two processes communicate using the π-Calculus framework,
 # dynamically creating channels and exchanging messages. Ensure that the processes interact
-# correctly and handle concurrent execution.
+# correctly and handle concurrent execution
 
 import multiprocessing
 
