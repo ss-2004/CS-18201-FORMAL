@@ -1,6 +1,6 @@
 # 5. Design a producer-consumer system using CCS principles, ensuring correct message passing
 # and proper synchronization between the producer and the consumer while preventing
-# deadlocks.
+# deadlocks
 
 import threading
 import queue
