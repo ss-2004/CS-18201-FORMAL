@@ -1,0 +1,15 @@
+MODULE main
+VAR
+  state : {s0, s1};
+
+ASSIGN
+  init(state) := s0;
+  next(state) := case
+    state = s0 : s1;
+    state = s1 : s0;
+  esac;
+
+-- CTL properties
+SPEC AG EF state = s0  -- From every state, it's always possible to eventually return to s0
+SPEC EF state = s1     -- It's possible to eventually reach s1
+SPEC AF state = s1     -- On all paths, eventually you reach s1

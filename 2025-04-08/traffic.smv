@@ -1,0 +1,29 @@
+-- traffic_light.smv
+MODULE main
+VAR
+  light : {red, green, yellow};
+
+ASSIGN
+  init(light) := red;
+  next(light) := case
+    light = red    : green;
+    light = green  : yellow;
+    light = yellow : red;
+  esac;
+
+-- CTL Properties
+
+-- 1. Eventually the light will be green
+SPEC EF light = green
+
+-- 2. It is always possible to reach red
+SPEC AG EF light = red
+
+-- 3. From red, next state must be green
+SPEC AG (light = red -> AX light = green)
+
+-- 4. It's not always yellow (yellow is not always the only state)
+SPEC AG !(light = yellow)
+
+-- 5. Eventually the system cycles through red again
+SPEC AF light = red
